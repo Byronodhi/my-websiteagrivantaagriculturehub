@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agrivanta Africa Agriculture Hub empowers African farmers through agricultural training, extension services, farming resources and agribusiness solutions.">
+  <meta name="theme-color" content="#123d27">
+  <title>Agrivanta Africa | Growing Africa's Agricultural Future</title>
+
+  <style>
+    /* ===== 1. BRAND SETTINGS ===== */
+    :root {
+      --green: #123d27;
+      --green-light: #24633d;
+      --gold: #e5b94c;
+      --cream: #f7f6ee;
+      --white: #ffffff;
+      --text: #24352a;
+      --muted: #667568;
+      --radius: 16px;
+      --shadow: 0 10px 35px rgba(18, 61, 39, 0.09);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    button, input, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      text-align: center;
+      margin: 0 auto 42px;
+    }
+
+    .eyebrow {
+      color: var(--green-light);
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      color: var(--green);
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      margin: 10px 0 15px;
+    }
+
+    .section-heading p,
+    .muted {
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #17291b;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 7px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(0.96);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.8);
+      color: white;
+      background: transparent;
+    }
+
+    /* ===== 2. NAVIGATION ===== */
+    .navbar {
+      background: var(--green);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 12px #00000012;
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      background: var(--gold);
+      color: var(--green);
+      border-radius: 12px;
+      font-size: 1.4rem;
+    }
+
+    .brand small {
+      display: block;
+      color: #d8e5d9;
+      font-size: 0.65rem;
+      font-weight: 400;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid #ffffff55;
+      background: transparent;
+      color: white;
+      padding: 7px 11px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* ===== 3. HERO SECTION ===== */
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(9, 35, 20, .94),
+        rgba(9, 35, 20, .64), rgba(9, 35, 20, .16)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 85px 0;
+    }
+
+    .hero .eyebrow {
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: clamp(2.6rem, 6vw, 4.7rem);
+      letter-spacing: -2px;
+      margin: 15px 0 22px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 590px;
+      color: #f0f5ee;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    /* ===== 4. INTRODUCTION ===== */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .intro-image {
+      height: 410px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-copy h2 {
+      margin: 12px 0 20px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 20px 0 25px;
+    }
+
+    .check-list li {
+      margin: 9px 0;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--green-light);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /* ===== 5. SERVICES ===== */
+    .services {
+      background: var(--cream);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 25px;
+      border: 1px solid #e8eade;
+      border-radius: var(--radius);
+      transition: 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      background: #e9f2e5;
+      border-radius: 14px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      color: var(--green-light);
+      font-weight: 800;
+    }
+
+    /* ===== 6. FEATURED EBOOK ===== */
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .ebook-visual {
+      min-height: 400px;
+      background: var(--green);
+      border-radius: var(--radius);
+      padding: 35px;
+      display: grid;
+      place-items: center;
+    }
+
+    .book-cover {
+      background: #f5e8c5;
+      border: 5px solid #d7b85b;
+      padding: 35px 23px;
+      text-align: center;
+      max-width: 280px;
+      min-height: 335px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 12px 12px 0 #0b2919;
+    }
+
+    .book-cover .book-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .book-cover h3 {
+      font-size: 2rem;
+      margin: 25px 0;
+    }
+
+    .book-cover p {
+      font-size: 0.85rem;
+    }
+
+    .ebook-copy p {
+      color: var(--muted);
+      margin: 15px 0;
+    }
+
+    .ebook-copy .check-list {
+      margin-bottom: 25px;
+    }
+
+    /* ===== 7. FARMING TIPS ===== */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .tip-card {
+      border: 1px solid #e7eae2;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+    }
+
+    .tip-card img {
+      height: 205px;
+    }
+
+    .tip-body {
+      padding: 22px;
+    }
+
+    .tip-body small {
+      color: var(--green-light);
+      font-weight: 800;
+    }
+
+    .tip-body h3 {
+      font-size: 1.12rem;
+      margin: 10px 0;
+    }
+
+    .tip-body p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    /* ===== 8. CALL TO ACTION ===== */
+    .cta {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 620px;
+      margin: 0 auto 25px;
+      color: #e1eae1;
+    }
+
+    /* ===== 9. CONTACT ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin: 15px 0;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+      background: var(--cream);
+      padding: 28px;
+      border-radius: var(--radius);
+    }
+
+    .form-group {
+      display: grid;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d9dfd5;
+      border-radius: 7px;
+      background: white;
+      color: var(--text);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: 2px solid var(--green-light);
+      outline-offset: 1px;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    #form-status {
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+
+    /* ===== 10. FOOTER ===== */
+    footer {
+      background: #0b2919;
+      color: #e1eae1;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    /* ===== 11. MOBILE RESPONSIVENESS ===== */
+    @media (max-width: 800px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: var(--green);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links .btn {
+        width: fit-content;
+      }
+
+      .intro-grid,
+      .ebook-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .intro-image {
+        height: 300px;
+      }
+
+      .service-grid,
+      .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .section {
+        padding: 60px 0;
+      }
+
+      .service-grid,
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Agrivanta Africa home">
+        <span class="brand-mark">🌱</span>
+        <span>
+          AGRIVANTA AFRICA
+          <small>Agriculture Hub</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        ☰ Menu
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#tips">Farm Tips</a></li>
+          <li><a href="#contact" class="btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">
+            Empowering Farmers. Growing Africa.
+          </span>
+
+          <h1>Growing Agriculture Into a Profitable Future</h1>
+
+          <p>
+            Welcome to Agrivanta Africa Agriculture Hub, your partner
+            in agricultural knowledge, practical farmer training,
+            modern farming solutions and sustainable agribusiness.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn">Explore Our Services →</a>
+            <a href="#contact" class="btn btn-outline">
+              Work With Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container intro-grid">
+
+        <img
+          class="intro-image"
+          src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=85"
+          alt="Agricultural land and farming landscape"
+          loading="lazy">
+
+        <div class="intro-copy">
+          <span class="eyebrow">Who We Are</span>
+          <h2>Making Agricultural Knowledge Work for Farmers</h2>
+
+          <p>
+            Agrivanta Africa Agriculture Hub is an agribusiness
+            initiative focused on connecting farmers with useful
+            knowledge, practical skills and opportunities to grow
+            sustainable agricultural enterprises.
+          </p>
+
+          <p>
+            From crop production and livestock management to farm
+            business planning, we aim to make agriculture more
+            productive, informed and commercially rewarding.
+          </p>
+
+          <ul class="check-list">
+            <li>Practical agricultural education</li>
+            <li>Farmer training and extension support</li>
+            <li>Modern and sustainable farming practices</li>
+            <li>Agribusiness development and market awareness</li>
+          </ul>
+
+          <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">What We Do</span>
+          <h2>Solutions for Every Growing Farmer</h2>
+          <p>
+            Practical services and agricultural resources designed
+            to help farmers build knowledge, improve production
+            and identify agribusiness opportunities.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-icon">🌾</div>
+            <h3>Farmer Training</h3>
+            <p>
+              Learn practical crop production, livestock management,
+              farm planning and sustainable agricultural techniques.
+            </p>
+            <a href="#contact" class="text-link">Ask About Training →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🧑🏽‍🌾</div>
+            <h3>Extension Services</h3>
+            <p>
+              Access agricultural guidance, farm demonstrations,
+              production tips and knowledge to support better
+              farming decisions.
+            </p>
+            <a href="#contact" class="text-link">Explore Support →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📚</div>
+            <h3>Farming Resources</h3>
+            <p>
+              Discover farming guides, digital learning materials,
+              eBooks and educational content for new and experienced
+              farmers.
+            </p>
+            <a href="#resources" class="text-link">Browse Resources →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🍅</div>
+            <h3>Crop Production</h3>
+            <p>
+              Explore crop selection, soil preparation, planting,
+              crop nutrition, pest management and harvesting.
+            </p>
+            <a href="#tips" class="text-link">Learn More →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Agribusiness Advisory</h3>
+            <p>
+              Understand farm budgeting, production costs,
+              record keeping, profitability and agricultural
+              enterprise planning.
+            </p>
+            <a href="#contact" class="text-link">Make an Enquiry →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🎥</div>
+            <h3>Farm Tours & Insights</h3>
+            <p>
+              Learn from demonstrations, farmer experiences,
+              agricultural interviews and practical farm stories.
+            </p>
+            <a href="#contact" class="text-link">Connect With Us →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED RESOURCE -->
+    <section class="section" id="resources">
+      <div class="container ebook-grid">
+
+        <div class="ebook-visual">
+          <div class="book-cover">
+            <span class="book-label">AGRIVANTA AFRICA PRESENTS</span>
+            <h3>THE TOMATO GOLDMINE</h3>
+            <p>
+              The Little-Known Blueprint Turning Small Gardens
+              Into Profitable Tomato Farms
+            </p>
+            <p style="margin-top: 25px; font-weight: 800;">
+              FARM SMART. GROW MORE.
+            </p>
+          </div>
+        </div>
+
+        <div class="ebook-copy">
+          <span class="eyebrow">Featured Digital Resource</span>
+          <h2>Turn Tomato Farming Knowledge Into Opportunity</h2>
+
+          <p>
+            Discover our featured tomato-farming eBook, created
+            to help aspiring growers understand the principles
+            of establishing and managing a tomato enterprise.
+          </p>
+
+          <ul class="check-list">
+            <li>Planning a tomato-growing project</li>
+            <li>Understanding production practices</li>
+            <li>Managing common crop challenges</li>
+            <li>Thinking about costs, markets and profitability</li>
+          </ul>
+
+          <!-- Replace # with your actual product checkout URL -->
+          <a href="#0706588708" class="btn">
+            Enquire About the eBook →
+          </a>
+
+          <p style="font-size: 0.85rem;">
+            Product information and purchase details can be added
+            when your online store is ready.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FARMING TIPS -->
+    <section class="section services" id="tips">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Learn & Grow</span>
+          <h2>Knowledge That Grows With Your Farm</h2>
+          <p>
+            Explore introductory farming topics. Expand this section
+            with your own articles, videos and expert advice.
+          </p>
+        </div>
+
+        <div class="tips-grid">
+
+          <article class="tip-card">
+            <img
+              src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=800&q=80"
+              alt="Fresh tomatoes growing on a plant"
+              loading="lazy">
+
+            <div class="tip-body">
+              <small>CROP FARMING</small>
+              <h3>Start Your Tomato Farm With a Plan</h3>
+              <p>
+                Consider your water supply, soil, variety,
+                production costs and target market before planting.
+              </p>
+            </div>
+          </article>
+
+          <article class="tip-card">
+            <img
+              src="https://images.unsplash.com/photo-1523742815156-59a9f9b7b6a8?auto=format&fit=crop&w=800&q=80"
+              alt="Rows of crops growing on a farm"
+              loading="lazy">
+
+            <div class="tip-body">
+              <small>SOIL MANAGEMENT</small>
+              <h3>Build a Strong Foundation for Your Crops</h3>
+              <p>
+                Understand soil testing, drainage, organic matter
+                and appropriate nutrient management.
+              </p>
+            </div>
+          </article>
+
+          <article class="tip-card">
+            <img
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80"
+              alt="Fresh agricultural produce ready for market"
+              loading="lazy">
+
+            <div class="tip-body">
+              <small>AGRIBUSINESS</small>
+              <h3>Think Beyond Production</h3>
+              <p>
+                Estimate costs, research buyers, reduce post-harvest
+                losses and keep accurate farm records.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+      <div class="container">
+        <span class="eyebrow" style="color: #e5b94c;">
+          Let's Grow Together
+        </span>
+        <h2>Have a Farming Idea? Let's Make It Grow.</h2>
+        <p>
+          Whether you are starting a farm, seeking agricultural
+          training or exploring an agribusiness opportunity,
+          Agrivanta Africa welcomes your enquiry.
+        </p>
+        <a href="#contact" class="btn">Start a Conversation →</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Contact Agrivanta</span>
+          <h2>We Would Love to Hear From You</h2>
+          <p>
+            Tell us about your farming project, training needs
+            or agricultural business enquiry.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <h3>Let's Talk Agriculture</h3>
+
+            <p>
+              <strong>Training:</strong><br>
+              Ask about upcoming farmer training programmes.
+            </p>
+
+            <p>
+              <strong>Resources:</strong><br>
+              Enquire about eBooks and educational materials.
+            </p>
+
+            <p>
+              <strong>Partnerships:</strong><br>
+              Explore opportunities to work together.
+            </p>
+
+            <p>
+              <strong>Email:</strong><br>
+              Replace this section with your official business email.
+            </p>
+
+            <p>
+              <strong>Location:</strong><br>
+              Kenya / Africa
+            </p>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+
+            <div class="form-group">
+              <label for="name">Your full name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What are you enquiring about?</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="e.g. Tomato farming training"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us how we can help..."
+                required></textarea>
+            </div>
+
+            <button class="btn" type="submit">
+              Prepare Email →
+            </button>
+
+            <p id="form-status" aria-live="polite">
+              
+            </p>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">🌱</span>
+        <span>
+          AGRIVANTA AFRICA
+          <small>Agriculture Hub</small>
+        </span>
+      </a>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p style="font-size: 0.85rem;">
+        © <span id="year"></span> Agrivanta Africa Agriculture Hub.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== MOBILE NAVIGATION =====
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    // Close the mobile menu after selecting a section
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // ===== AUTOMATIC COPYRIGHT YEAR =====
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // ===== CONTACT FORM DEMO =====
+    document.getElementById("contact-form")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const status = document.getElementById("form-status");
+
+        if (!name || !email || !subject || !message) {
+          status.textContent = "Please complete all fields.";
+          return;
+        }
+
+        // IMPORTANT:
+        // Replace this address with your real business email.
+        const businessEmail = "YOUR_EMAIL@example.com";
+
+        if (businessEmail === "YOUR_EMAIL@example.com") {
+          status.textContent =
+            "Your form is working! Replace YOUR_EMAIL@example.com " +
+            "in the JavaScript with your real business email to " +
+            "prepare enquiries for your inbox.";
+          return;
+        }
+
+        const emailSubject = encodeURIComponent(
+          "Agrivanta Website: " + subject
+        );
+
+        const emailBody = encodeURIComponent(
+          "Name: " + name + "\n" +
+          "Reply email: " + email + "\n\n" +
+          "Message:\n" + message
+        );
+
+        status.textContent =
+          "Opening your email application. Please review and send the message.";
+
+        window.location.href =
+          "mailto:" + businessEmail +
+          "?subject=" + emailSubject +
+          "&body=" + emailBody;
+      });
+  </script>
+
+</body>
+</html>
